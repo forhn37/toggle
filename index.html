@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 체크박스 css */
     .toggleSwitch {
         width : 100px;
         height: 50px;
@@ -15,6 +16,7 @@
         box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
         cursor : pointer;
     }
+    /* 체크박스안에 원 css */
     .toggleSwitch .toggleButton {
         width: 40px;
         height: 40px;
@@ -24,6 +26,16 @@
         transform:translateY(-50%);
         border-radius: 50%;
         background: #f03d3d;
+    }
+    #toggle:checked ~ .toggleSwitch {
+        background: #f03d3d;
+    }
+    #toggle:checked ~ .toggleSwitch .toggleButton {
+        left: calc(100% - 44px);
+        background:#fff;
+    }
+    .toggleSwitch, .toggleButton {
+        transition: all 0.2s ease-in;
     }
     </style>
 </head>
